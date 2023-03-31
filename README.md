@@ -41,13 +41,13 @@ Add the following (example) configuration to your configuration.yaml file.  This
     SQL_file_name: "dublin"
     arrivals_limit: 40
     departures:
-	  - user_stop_name: "Bus 16 Stop 2922"
-      - stop_code: "2992"
+      - user_stop_name: "Bus 16 Stop 2922"
+        stop_code: "2992"
         route: "16"
         operator: "7778019"
 
       - user_stop_name: "Bus 175 Stop 2967"
-	    stop_code: "2967"
+	stop_code: "2967"
         route: "175"
         operator: "7778021"
 ```        
