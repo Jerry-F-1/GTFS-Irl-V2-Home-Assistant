@@ -83,6 +83,15 @@ The sensor implementation provides some extra state attributes as follows:
 * __Latitude__: With Longitude provides the vehicle's last position result from polling
 * __Longitude__: With Latitude provides the vehicle's last position result from polling 
 
+Example of a template sensor for next bus
+
+```   
+      - name: "Next 16 Bus"     
+        state: "{{ states.sensor.bus_16_stop_2922.attributes['next_arrival'] }}"
+        unit_of_measurement: 'min'
+        icon: mdi:bus
+```
+
 # Please Note
 
 * This implementation for Version 2 is provided as is.  I use it for my own local implementation of Home Assistant and for my local buses in Dublin. I haven't done extensive testing but if any issues are found I will make best endeavors to investigate and fix them.
