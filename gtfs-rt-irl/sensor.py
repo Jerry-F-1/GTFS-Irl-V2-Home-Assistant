@@ -61,7 +61,7 @@ TIME_STR_FORMAT = "%H:%M"
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
         vol.Required(CONF_TRIP_UPDATE_URL): cv.string,
-        vol.Required(CONF_API_KEY): cv.string,
+        vol.Optional(CONF_API_KEY): cv.string,
         vol.Required(CONF_SQL_FILE): cv.string,
         vol.Optional(CONF_LIMIT, default=30): vol.Coerce(int),
         vol.Optional(CONF_VEHICLE_POSITION_URL): cv.string,
