@@ -56,7 +56,7 @@ Add the following (example) configuration to your configuration.yaml file.  This
 
 * __trip_update_url__ (_Required_): The production realtime feed URL as provided by the transport authority. 
 * __vehicle_position_url__ (Required): The vehicle position realtime feed as provided by the transport authority.
-* __api_key__ (_Required_): Provided by the transport authority when you subscribe.
+* __api_key__ (_Optional_): Provided by the transport authority when you subscribe.  Some authorities do not require an API key.
 * __SQL_file_file__ (_Required_): The name of the database file in the gtfs folder to contain the static schedule data, e.g. dublin or cork etc..
 * __arrivals_limit__ (_Optional default=30_):  The number of arrivals found to be returned, across all the stops required.
 * __departures__(_Required_): The list of route / stop / operator combinations of interest.  At least 1 must be specified.
