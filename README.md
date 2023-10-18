@@ -15,8 +15,8 @@ Further details are at the Irish National Transport Authority website https://de
 # Setup and Installation
 
 Before starting the installation you will need to install 2 python modules:
-* gtfs-realtime-bindings==0.0.7
-* protobuf==3.20.1
+* gtfs-realtime-bindings>=0.0.7
+* protobuf>=3.20.1
 
 1. Subscribe to the API on the Transport Authority's web page to obtain the API Token/Key which you will need to access the realtime data.  This is free and takes about 15 mins.
 2. Download the relevant static schedule data zip file(s) provided.  You might need more than one file depending on your requirements.
