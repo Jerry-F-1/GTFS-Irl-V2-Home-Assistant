@@ -313,14 +313,14 @@ class PublicTransportSensor(Entity):
     def state(self) -> str:
         """Return the state of the sensor."""
         next_buses = self._get_next_buses()
-        return next_buses[0].arrival_time if len(next_buses) > 0 else "-"
+        return next_buses[0].arrival_time if len(next_buses) > 0 else None
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
         """Return the extra state attributes."""
         next_buses = self._get_next_buses()
         arrivals = str(len(next_buses))
-        next_arrival = "-"
+        next_arrival = None
         departure_time = "-"
         rt_flag = False
         stop_name = "-"
@@ -362,7 +362,7 @@ class PublicTransportSensor(Entity):
                 attrs[ATTR_LONGITUDE] = self._longitude
         if len(next_buses) > 1:
             attrs[ATTR_NEXT_ARRIVAL] = (
-                next_buses[1].arrival_time if len(next_buses) > 1 else "-"
+                next_buses[1].arrival_time if len(next_buses) > 1 else None
             )
         return attrs
 
