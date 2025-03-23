@@ -26,7 +26,7 @@ from homeassistant.util import Throttle
 
 _LOGGER = logging.getLogger(__name__)
 
-REQUIREMENTS = ["gtfs-realtime-bindings==0.0.7", "protobuf==3.20.1"]
+REQUIREMENTS = ["gtfs-realtime-bindings==1.0.0", "protobuf==5.29.2"]
 
 ATTR_STOP_USER_NAME = "Stop User Name"
 ATTR_STOP_CODE = "Stop Code"
