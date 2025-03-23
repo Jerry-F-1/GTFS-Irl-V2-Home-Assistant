@@ -15,8 +15,8 @@ Further details are at the Irish National Transport Authority website https://de
 # Setup and Installation
 
 Before starting the installation you will need to install 3 python modules:
-* gtfs-realtime-bindings>=0.0.7
-* protobuf>=3.20.1
+* gtfs-realtime-bindings>=1.0.0
+* protobuf>=5.29.2
 * pygtfs
 
 1. Subscribe to the API on the Transport Authority's web page to obtain the API Token/Key which you will need to access the realtime data.  This is free and takes about 15 mins.
@@ -95,6 +95,6 @@ Example of a template sensor for next bus
 
 # Please Note
 
-* This implementation for Version 2 is provided as is.  I use it for my own local implementation of Home Assistant and for my local buses in Dublin. I haven't done extensive testing but if any issues are found I will make best endeavors to investigate and fix them.  I am running HA Core on a venv on a Raspberry Pi4 and version 2023.10.5 of HA.  I am not able to test for other environments.
+* This implementation for Version 2 is provided as is.  I use it for my own local implementation of Home Assistant and for my local buses in Dublin. I haven't done extensive testing but if any issues are found I will make best endeavors to investigate and fix them.  I am running HA Core on a venv on a Raspberry Pi5 and version 2025.2.1 of HA.  I am not able to test for other environments.
 * Position information seems to be intermittent, possibly only transmitted when a bus is stopped at a stop.  This means that the polling cycle of the sensor could miss a position result.  Therefore, I've coded it so that the sensor retains the last polling result until a new position is returned.  In the meantime the bus is moving so the new position could be missed.  If anyone has a view on this, better information, or a correct intrepretation, post a comment in the discussion page.
 * For now the static schedule data will need to be updated every so often, which means the SQLite database and Zip files should be deleted.  The replacement Zip file(s) should be uploaded and Home Assistant restarted to re-generate the SQLite database. The plans announced are that V2 will contain 3 APIs in total including a new API to help automate updates to the static schedule data.  I haven't seen any announcement about this as of 30/03/2023.  
